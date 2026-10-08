@@ -153,9 +153,9 @@
 <text class="label" text-anchor="middle" y="1267"><tspan x="605.5" dy="0">-</tspan></text></g>
 <g transform="rotate(30 714 1307)"><rect class="thumb" x="661" y="1257" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="1312"><tspan x="713.5" dy="0">€</tspan></text></g>
-<g transform="rotate(-30 873 1307)"><rect class="thumb" x="820" y="1257" width="105" height="100" rx="8"/>
+<g transform="rotate(-30 873 1307)"><rect class="empty" x="820" y="1257" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="1312"><tspan x="872.5" dy="0">—</tspan></text></g>
-<g transform="rotate(-15 981 1262)"><rect class="thumb" x="928" y="1212" width="105" height="100" rx="8"/>
+<g transform="rotate(-15 981 1262)"><rect class="empty" x="928" y="1212" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="1267"><tspan x="980.5" dy="0">—</tspan></text></g>
 <g transform="rotate(0 42 825)"><rect class="thumb" x="1045" y="1196" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="1251"><tspan x="1097.5" dy="0">Hyper</tspan></text></g>
@@ -231,9 +231,9 @@
 <text class="label" text-anchor="middle" y="1942"><tspan x="605.5" dy="0">_</tspan></text></g>
 <g transform="rotate(30 714 1982)"><rect class="thumb" x="661" y="1932" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="1987"><tspan x="713.5" dy="0">°</tspan></text></g>
-<g transform="rotate(-30 873 1982)"><rect class="thumb" x="820" y="1932" width="105" height="100" rx="8"/>
+<g transform="rotate(-30 873 1982)"><rect class="empty" x="820" y="1932" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="1987"><tspan x="872.5" dy="0">—</tspan></text></g>
-<g transform="rotate(-15 981 1937)"><rect class="thumb" x="928" y="1887" width="105" height="100" rx="8"/>
+<g transform="rotate(-15 981 1937)"><rect class="empty" x="928" y="1887" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="1942"><tspan x="980.5" dy="0">—</tspan></text></g>
 <g transform="rotate(0 42 1500)"><rect class="thumb" x="1045" y="1871" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="1926"><tspan x="1097.5" dy="0">Hyper</tspan></text></g>
@@ -303,9 +303,9 @@
 <text class="label" text-anchor="middle" y="2579"><tspan x="1379.5" dy="0">—</tspan></text></g>
 <g transform="rotate(10 1492 2548)"><rect class="trans" x="1439" y="2498" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="2553"><tspan x="1491.5" dy="0">⇧</tspan></text></g>
-<g transform="rotate(0 42 2175)"><rect class="thumb" x="435" y="2546" width="105" height="100" rx="8"/>
+<g transform="rotate(0 42 2175)"><rect class="empty" x="435" y="2546" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="2601"><tspan x="487.5" dy="0">—</tspan></text></g>
-<g transform="rotate(15 605 2612)"><rect class="thumb" x="553" y="2562" width="105" height="100" rx="8"/>
+<g transform="rotate(15 605 2612)"><rect class="empty" x="553" y="2562" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="2617"><tspan x="605.5" dy="0">—</tspan></text></g>
 <g transform="rotate(30 714 2657)"><rect class="thumb" x="661" y="2607" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="2662"><tspan x="713.5" dy="0">⎋</tspan></text></g>
@@ -381,11 +381,11 @@
 <text class="label" text-anchor="middle" y="3254"><tspan x="1379.5" dy="0">—</tspan></text></g>
 <g transform="rotate(10 1492 3223)"><rect class="trans" x="1439" y="3173" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3228"><tspan x="1491.5" dy="0">⇧</tspan></text></g>
-<g transform="rotate(0 42 2850)"><rect class="thumb" x="435" y="3221" width="105" height="100" rx="8"/>
+<g transform="rotate(0 42 2850)"><rect class="empty" x="435" y="3221" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3276"><tspan x="487.5" dy="0">—</tspan></text></g>
-<g transform="rotate(15 605 3287)"><rect class="thumb" x="553" y="3237" width="105" height="100" rx="8"/>
+<g transform="rotate(15 605 3287)"><rect class="empty" x="553" y="3237" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3292"><tspan x="605.5" dy="0">—</tspan></text></g>
-<g transform="rotate(30 714 3332)"><rect class="thumb" x="661" y="3282" width="105" height="100" rx="8"/>
+<g transform="rotate(30 714 3332)"><rect class="empty" x="661" y="3282" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3337"><tspan x="713.5" dy="0">—</tspan></text></g>
 <g transform="rotate(-30 873 3332)"><rect class="thumb" x="820" y="3282" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3337"><tspan x="872.5" dy="0">Search</tspan></text></g>
@@ -459,17 +459,17 @@
 <text class="label" text-anchor="middle" y="3929"><tspan x="1379.5" dy="0">Reset</tspan></text></g>
 <g transform="rotate(10 1492 3898)"><rect class="trans" x="1439" y="3848" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3903"><tspan x="1491.5" dy="0">⇧</tspan></text></g>
-<g transform="rotate(0 42 3525)"><rect class="thumb" x="435" y="3896" width="105" height="100" rx="8"/>
+<g transform="rotate(0 42 3525)"><rect class="empty" x="435" y="3896" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3951"><tspan x="487.5" dy="0">—</tspan></text></g>
-<g transform="rotate(15 605 3962)"><rect class="thumb" x="553" y="3912" width="105" height="100" rx="8"/>
+<g transform="rotate(15 605 3962)"><rect class="empty" x="553" y="3912" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3967"><tspan x="605.5" dy="0">—</tspan></text></g>
 <g transform="rotate(30 714 4007)"><rect class="thumb" x="661" y="3957" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="4012"><tspan x="713.5" dy="0">⎋</tspan></text></g>
-<g transform="rotate(-30 873 4007)"><rect class="thumb" x="820" y="3957" width="105" height="100" rx="8"/>
+<g transform="rotate(-30 873 4007)"><rect class="empty" x="820" y="3957" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="4012"><tspan x="872.5" dy="0">—</tspan></text></g>
-<g transform="rotate(-15 981 3962)"><rect class="thumb" x="928" y="3912" width="105" height="100" rx="8"/>
+<g transform="rotate(-15 981 3962)"><rect class="empty" x="928" y="3912" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3967"><tspan x="980.5" dy="0">—</tspan></text></g>
-<g transform="rotate(0 42 3525)"><rect class="thumb" x="1045" y="3896" width="105" height="100" rx="8"/>
+<g transform="rotate(0 42 3525)"><rect class="empty" x="1045" y="3896" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3951"><tspan x="1097.5" dy="0">—</tspan></text></g>
 <text class="legend" x="42" y="4170">Meta: ⇧⌘ on macOS · ⇧⌃ on Windows</text>
 <text class="legend" x="42" y="4205">Hyper: ⌃⌥⌘ on macOS · ⌃⌥ on Windows</text>
