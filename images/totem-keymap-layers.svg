@@ -70,17 +70,17 @@
 <g transform="rotate(10 1492 523)"><rect class="key" x="1439" y="473" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="528"><tspan x="1491.5" dy="0">⇧</tspan></text></g>
 <g transform="rotate(0 42 150)"><rect class="thumb" x="435" y="521" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="567"><tspan x="487.5" dy="0">Tab</tspan><tspan x="487.5" dy="19">Meta</tspan></text></g>
+<text class="label" text-anchor="middle" y="567"><tspan x="487.5" dy="0">⇥</tspan><tspan x="487.5" dy="19">Meta</tspan></text></g>
 <g transform="rotate(15 605 587)"><rect class="thumb" x="553" y="537" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="583"><tspan x="605.5" dy="0">SPACE</tspan><tspan x="605.5" dy="19">NAV</tspan></text></g>
+<text class="label" text-anchor="middle" y="583"><tspan x="605.5" dy="0">␣</tspan><tspan x="605.5" dy="19">NAV</tspan></text></g>
 <g transform="rotate(30 714 632)"><rect class="thumb" x="661" y="582" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="628"><tspan x="713.5" dy="0">ESC</tspan><tspan x="713.5" dy="19">FUN</tspan></text></g>
+<text class="label" text-anchor="middle" y="628"><tspan x="713.5" dy="0">⎋</tspan><tspan x="713.5" dy="19">FUN</tspan></text></g>
 <g transform="rotate(-30 873 632)"><rect class="thumb" x="820" y="582" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="628"><tspan x="872.5" dy="0">Backspace</tspan><tspan x="872.5" dy="19">SYM</tspan></text></g>
+<text class="label" text-anchor="middle" y="628"><tspan x="872.5" dy="0">⌫</tspan><tspan x="872.5" dy="19">SYM</tspan></text></g>
 <g transform="rotate(-15 981 587)"><rect class="thumb" x="928" y="537" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="583"><tspan x="980.5" dy="0">Enter</tspan><tspan x="980.5" dy="19">NUM</tspan></text></g>
+<text class="label" text-anchor="middle" y="583"><tspan x="980.5" dy="0">↵</tspan><tspan x="980.5" dy="19">NUM</tspan></text></g>
 <g transform="rotate(0 42 150)"><rect class="thumb" x="1045" y="521" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="567"><tspan x="1097.5" dy="0">Delete</tspan><tspan x="1097.5" dy="19">Hyper</tspan></text></g>
+<text class="label" text-anchor="middle" y="567"><tspan x="1097.5" dy="0">⌦</tspan><tspan x="1097.5" dy="19">Hyper</tspan></text></g>
 <rect class="card" x="12" y="775" rx="18" width="1580" height="660"/>
 <text class="layer" x="42" y="815">Number · NUMBER · 1</text>
 <g transform="rotate(-10 172 1026)"><rect class="key" x="119" y="976" width="105" height="100" rx="8"/>
@@ -308,13 +308,13 @@
 <g transform="rotate(15 605 2612)"><rect class="thumb" x="553" y="2562" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="2617"><tspan x="605.5" dy="0">—</tspan></text></g>
 <g transform="rotate(30 714 2657)"><rect class="thumb" x="661" y="2607" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="2662"><tspan x="713.5" dy="0">To Base</tspan></text></g>
+<text class="label" text-anchor="middle" y="2662"><tspan x="713.5" dy="0">⎋</tspan></text></g>
 <g transform="rotate(-30 873 2657)"><rect class="thumb" x="820" y="2607" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="2662"><tspan x="872.5" dy="0">Backspace</tspan></text></g>
+<text class="label" text-anchor="middle" y="2662"><tspan x="872.5" dy="0">⌫</tspan></text></g>
 <g transform="rotate(-15 981 2612)"><rect class="thumb" x="928" y="2562" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="2617"><tspan x="980.5" dy="0">Enter</tspan></text></g>
+<text class="label" text-anchor="middle" y="2617"><tspan x="980.5" dy="0">↵</tspan></text></g>
 <g transform="rotate(0 42 2175)"><rect class="thumb" x="1045" y="2546" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="2592"><tspan x="1097.5" dy="0">Delete</tspan><tspan x="1097.5" dy="19">Hyper</tspan></text></g>
+<text class="label" text-anchor="middle" y="2592"><tspan x="1097.5" dy="0">⌦</tspan><tspan x="1097.5" dy="19">Hyper</tspan></text></g>
 <rect class="card" x="12" y="2800" rx="18" width="1580" height="660"/>
 <text class="layer" x="42" y="2840">Function · FUNCTION · 4</text>
 <g transform="rotate(-10 172 3051)"><rect class="key" x="119" y="3001" width="105" height="100" rx="8"/>
@@ -464,7 +464,7 @@
 <g transform="rotate(15 605 3962)"><rect class="thumb" x="553" y="3912" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3967"><tspan x="605.5" dy="0">—</tspan></text></g>
 <g transform="rotate(30 714 4007)"><rect class="thumb" x="661" y="3957" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="4012"><tspan x="713.5" dy="0">To Base</tspan></text></g>
+<text class="label" text-anchor="middle" y="4012"><tspan x="713.5" dy="0">⎋</tspan></text></g>
 <g transform="rotate(-30 873 4007)"><rect class="thumb" x="820" y="3957" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="4012"><tspan x="872.5" dy="0">—</tspan></text></g>
 <g transform="rotate(-15 981 3962)"><rect class="thumb" x="928" y="3912" width="105" height="100" rx="8"/>
