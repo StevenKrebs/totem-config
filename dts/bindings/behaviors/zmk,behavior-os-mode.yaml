@@ -1,0 +1,3 @@
+description: Toggle the OS-aware key mapping mode
+compatible: "zmk,behavior-os-mode"
+include: zero_param.yaml
