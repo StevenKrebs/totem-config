@@ -74,9 +74,9 @@
 <g transform="rotate(15 605 587)"><rect class="thumb" x="553" y="537" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="583"><tspan x="605.5" dy="0">␣</tspan><tspan x="605.5" dy="19">NAV</tspan></text></g>
 <g transform="rotate(30 714 632)"><rect class="thumb" x="661" y="582" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="628"><tspan x="713.5" dy="0">⎋</tspan><tspan x="713.5" dy="19">FUN</tspan></text></g>
+<text class="label" text-anchor="middle" y="628"><tspan x="713.5" dy="0">⌫</tspan><tspan x="713.5" dy="19">FUN</tspan></text></g>
 <g transform="rotate(-30 873 632)"><rect class="thumb" x="820" y="582" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="628"><tspan x="872.5" dy="0">⌫</tspan><tspan x="872.5" dy="19">SYM</tspan></text></g>
+<text class="label" text-anchor="middle" y="628"><tspan x="872.5" dy="0">⎋</tspan><tspan x="872.5" dy="19">SYM</tspan></text></g>
 <g transform="rotate(-15 981 587)"><rect class="thumb" x="928" y="537" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="583"><tspan x="980.5" dy="0">↵</tspan><tspan x="980.5" dy="19">NUM</tspan></text></g>
 <g transform="rotate(0 42 150)"><rect class="thumb" x="1045" y="521" width="105" height="100" rx="8"/>
@@ -308,9 +308,9 @@
 <g transform="rotate(15 605 2612)"><rect class="empty" x="553" y="2562" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="2617"><tspan x="605.5" dy="0">—</tspan></text></g>
 <g transform="rotate(30 714 2657)"><rect class="thumb" x="661" y="2607" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="2662"><tspan x="713.5" dy="0">⎋</tspan></text></g>
+<text class="label" text-anchor="middle" y="2662"><tspan x="713.5" dy="0">⌫</tspan></text></g>
 <g transform="rotate(-30 873 2657)"><rect class="thumb" x="820" y="2607" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="2662"><tspan x="872.5" dy="0">⌫</tspan></text></g>
+<text class="label" text-anchor="middle" y="2662"><tspan x="872.5" dy="0">⎋</tspan></text></g>
 <g transform="rotate(-15 981 2612)"><rect class="thumb" x="928" y="2562" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="2617"><tspan x="980.5" dy="0">↵</tspan></text></g>
 <g transform="rotate(0 42 2175)"><rect class="thumb" x="1045" y="2546" width="105" height="100" rx="8"/>
@@ -463,10 +463,10 @@
 <text class="label" text-anchor="middle" y="3951"><tspan x="487.5" dy="0">—</tspan></text></g>
 <g transform="rotate(15 605 3962)"><rect class="empty" x="553" y="3912" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3967"><tspan x="605.5" dy="0">—</tspan></text></g>
-<g transform="rotate(30 714 4007)"><rect class="thumb" x="661" y="3957" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="4012"><tspan x="713.5" dy="0">⎋</tspan></text></g>
-<g transform="rotate(-30 873 4007)"><rect class="empty" x="820" y="3957" width="105" height="100" rx="8"/>
-<text class="label" text-anchor="middle" y="4012"><tspan x="872.5" dy="0">—</tspan></text></g>
+<g transform="rotate(30 714 4007)"><rect class="empty" x="661" y="3957" width="105" height="100" rx="8"/>
+<text class="label" text-anchor="middle" y="4012"><tspan x="713.5" dy="0">—</tspan></text></g>
+<g transform="rotate(-30 873 4007)"><rect class="thumb" x="820" y="3957" width="105" height="100" rx="8"/>
+<text class="label" text-anchor="middle" y="4012"><tspan x="872.5" dy="0">⎋</tspan></text></g>
 <g transform="rotate(-15 981 3962)"><rect class="empty" x="928" y="3912" width="105" height="100" rx="8"/>
 <text class="label" text-anchor="middle" y="3967"><tspan x="980.5" dy="0">—</tspan></text></g>
 <g transform="rotate(0 42 3525)"><rect class="empty" x="1045" y="3896" width="105" height="100" rx="8"/>
