@@ -144,13 +144,13 @@
 
         nav_layer {
             bindings = <&tog 3>;
-            key-positions = <33 36>;
+            key-positions = <33 35>;
             layers = <0>;
         };
 
         sys_layer {
             bindings = <&tog 5>;
-            key-positions = <34 36>;
+            key-positions = <34 35>;
             layers = <0>;
         };
     };
@@ -164,7 +164,7 @@
                 &kp Q  &kp W               &kp E                  &kp R                  &kp T                 &kp Y      &kp U                    &kp I                    &kp O                &kp P
                 &kp A  &thrm_left LCTRL S  &thrm_left LEFT_ALT D  &thrm_left LEFT_GUI F  &thrm_left GLOBE G    &kp H      &thrm_right RIGHT_GUI J  &thrm_right RIGHT_ALT K  &thrm_right RCTRL L  &kp APOSTROPHE
 &kp LEFT_SHIFT  &kp Z  &kp X               &kp C                  &kp V                  &kp B                 &kp N      &kp M                    &kp COMMA                &kp DOT              &kp FSLH        &kp RSHIFT
-                                           &meta_mt 0 TAB         &lt 3 SPACE            &lt 4 BACKSPACE       &lt 2 ESC  &lt 1 RETURN             &hyper_mt 0 DELETE
+                                           &meta_mt 0 ESC         &lt 3 SPACE            &lt 4 TAB             &lt 2 ENTER  &lt 1 BACKSPACE         &hyper_mt 0 DELETE
             >;
         };
 
@@ -194,7 +194,7 @@
         &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &none         &key_repeat   &none            &none     &none       &kp INS             &none      &none
         &none              &kp LCTRL          &kp LEFT_ALT  &kp LEFT_GUI  &kp GLOBE        &kp LEFT  &kp DOWN    &kp UP_ARROW        &kp RIGHT  &none
 &trans  &kp LG(Z)          &kp LG(X)          &kp LG(C)     &kp LG(V)     &kp LS(LG(Z))    &kp HOME  &kp PG_DN   &kp PG_UP           &kp END    &none  &trans
-                                              &none         &none         &kp BACKSPACE    &to 0     &kp RETURN  &hyper_mt 0 DELETE
+                                              &to 0         &none         &none             &kp RETURN  &kp BACKSPACE  &hyper_mt 0 DELETE
             >;
         };
 
@@ -214,7 +214,7 @@
        &bootloader     &os           &smart_shift  &out OUT_TOG  &none    &none  &none  &none  &none  &bootloader
        &studio_unlock  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR    &none    &none  &none  &none  &none  &none
 &none  &sys_reset      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none    &none  &none  &none  &none  &sys_reset   &none
-                                     &none         &none         &none    &to 0  &none  &none
+                                     &to 0         &none         &none    &none  &none  &none
             >;
         };
     };

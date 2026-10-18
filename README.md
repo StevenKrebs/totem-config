@@ -20,7 +20,7 @@
 | **Function** | F-keys, media, brightness, search, emoji, screenshots, and screen lock shortcuts. |
 | **System** | OS mode, Smart Shift, output, Bluetooth profiles, Studio, bootloader, and settings reset. |
 
-Hold Space + Return to toggle Navigation, or Backspace + Return to toggle System. Combos use physical key positions, so the System combo remains on the Backspace thumb after the tap swap. On Navigation and System, the Escape thumb returns to Base.
+Hold Space + Enter to toggle Navigation, or Tab + Enter to toggle System. Combos use physical key positions. On Navigation and System, the Escape thumb returns to Base.
 
 ## Key behaviors
 
