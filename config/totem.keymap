@@ -149,9 +149,9 @@
         };
 
         sys_layer {
-            bindings = <&tog 5>;
+            bindings = <&tog 6>;
             key-positions = <34 35>;
-            layers = <0>;
+            layers = <0 5>;
         };
     };
 
@@ -201,10 +201,20 @@
         FUNCTION {
             label = "FUNCTION";
             bindings = <
-        &kp F12  &kp F7  &kp F8  &kp F9  &screen_full 0    &none            &kp C_BRI_DN                &kp C_BRI_UP                  &screen_lock 0            &none
+        &kp F12  &kp F7  &kp F8  &kp F9  &screen_full 0    &none            &screen_lock 0              &kp C_BRI_DN                  &kp C_BRI_UP              &none
         &kp F11  &kp F4  &kp F5  &kp F6  &screen_area 0    &none            &thrm_right RIGHT_GUI C_PP  &thrm_right RIGHT_ALT C_PREV  &thrm_right RCTRL C_NEXT  &none
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &screen_adj 0     &none            &kp C_MUTE                  &kp C_VOL_DN                  &kp C_VOL_UP              &none  &trans
                          &none   &none   &none             &kp C_AC_SEARCH  &caps_logic CAPS 0          &emojis 0
+            >;
+        };
+
+        GAMING {
+            label = "GAME";
+            bindings = <
+        &kp ESC       &kp Q  &kp W  &kp E  &kp R    &none  &none  &none  &none  &none
+        &kp LSHFT     &kp A  &kp S  &kp D  &kp G    &none  &none  &none  &none  &none
+&trans  &kp LEFT_GUI  &kp X  &kp C  &kp V  &kp B    &none  &none  &none  &none  &none  &trans
+                             &kp LEFT_ALT  &kp SPACE  &kp TAB    &kp ENTER  &kp BACKSPACE  &none
             >;
         };
 
@@ -214,7 +224,7 @@
        &bootloader     &os           &smart_shift  &out OUT_TOG  &none    &none  &none  &none  &none  &bootloader
        &studio_unlock  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR    &none    &none  &none  &none  &none  &none
 &none  &sys_reset      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none    &none  &none  &none  &none  &sys_reset   &none
-                                     &to 0         &none         &none    &none  &none  &none
+                                     &to 0         &none         &to 5    &none  &none  &none
             >;
         };
     };

@@ -5,7 +5,7 @@
 <details>
 <summary>Keymap</summary>
 
-![Totem keymap across Base, Number, Symbol, Navigation, Function, and System layers](images/totem-keymap-layers.svg)
+![Totem keymap across Base, Number, Symbol, Navigation, Function, Gaming, and System layers](images/totem-keymap-layers.svg)
 
 </details>
 
@@ -18,9 +18,10 @@
 | **Symbol** | Punctuation and shifted symbols. |
 | **Navigation** | Cursor and page movement, editing, and clipboard shortcuts. |
 | **Function** | F-keys, media, brightness, search, emoji, screenshots, and screen lock shortcuts. |
+| **Gaming** | Shifted left-hand gaming keys with plain thumb keys. |
 | **System** | OS mode, Smart Shift, output, Bluetooth profiles, Studio, bootloader, and settings reset. |
 
-Hold Space + Enter to toggle Navigation, or Tab + Enter to toggle System. Combos use physical key positions. On Navigation and System, the Escape thumb returns to Base.
+Hold Space + Enter to toggle Navigation, or Tab + Enter to toggle System from Base or Gaming. On System, press the Tab thumb to enter Gaming. Combos use physical key positions. On Navigation and System, the Escape thumb returns to Base.
 
 ## Key behaviors
 
