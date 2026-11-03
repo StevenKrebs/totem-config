@@ -1,6 +1,6 @@
-# Central dongle preparation
+# Central dongle firmware
 
-Status: preparation only. This branch retains the existing two-half firmware and pairing roles. No dongle firmware has been built or flashed.
+This branch implements dongle-central firmware. Hardware pairing and runtime behavior require verification when the dongle arrives.
 
 ## Ordered hardware
 
@@ -18,39 +18,18 @@ https://github.com/Conor-Burns/zmk-config-totem-dongle/blob/main/build.yaml
 The authoritative integration guide is:
 https://zmk.dev/docs/hardware-integration/dongle
 
-## Implementation scope
+## Implemented configuration
 
-1. Keep this repository's keymap, custom behaviors, and Executive Edition layout. Do not replace them with the example's Colemak-DH keymap.
-2. Add a local dongle shield with mock kscan, central role, and **two** peripheral connections. Copy the exact matrix transform and physical layouts from the `victorlucachi/zmk-keyboards-totem` module used by this repository, preserving node names and removing any physical-layout kscan assignment on the dongle.
-3. Convert both halves to peripherals and move Studio USB support to the dongle. Keep the shared keymap and custom behavior module available to the dongle. Check custom behavior compilation on peripheral and settings-reset builds.
-4. Review `config/totem.conf` USB boot and central battery-fetch/proxy options for their new device roles; validate resolved Kconfig for all builds.
-5. Build the dongle, both halves, and XIAO settings-reset firmware. Validate the dongle's layout in Studio and its custom OS mode and smart behaviors.
+- `build.yaml` builds `totem_left` and `totem_right` as peripherals, `totem_dongle` as central with USB Studio support, and XIAO `settings_reset` firmware.
+- `config/west.yml` pins the existing Totem module to `6b76bfbc5356cb5d93fc2d64acf44608bfc50187`, which already supplies the matching dongle shield and physical layout. No copied shield is needed.
+- `config/totem.conf` keeps radio power and battery reporting on both halves.
+- `config/totem_dongle.conf` configures two peripheral connections and seven connection/bond slots, preserving five host Bluetooth profiles. It keeps the USB-powered dongle awake and enables split battery fetching/proxy reporting.
+- ZMK remains on v0.3 with `seeeduino_xiao_ble` board naming. The newer vendor example uses `xiao_ble//zmk`; those names are not mixed here.
+- The existing Gaming keymap, Executive Edition geometry, OS mode, and smart behaviors are retained. Processing and saved central settings now live on the dongle.
 
-More than three files will be necessary for implementation: the shield needs its own overlay and Kconfig declarations, plus build matrix changes. A build-matrix-only change cannot supply the dongle's matrix transform or central role defaults.
+## Firmware outputs
 
-## Build matrix sketch for this repository's ZMK v0.3
-
-This is an implementation example, not an active build definition. `totem_dongle` must first be defined locally as described above.
-
-```yaml
-include:
-  - board: seeeduino_xiao_ble
-    shield: totem_left
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  - board: seeeduino_xiao_ble
-    shield: totem_right
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  - board: seeeduino_xiao_ble
-    shield: totem_dongle
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
-```
-
-The example repository uses newer `xiao_ble//zmk` board naming. This repository pins ZMK **v0.3** and currently uses `seeeduino_xiao_ble`; do not mix board names across versions or upgrade ZMK as part of the keymap port. Confirm the dongle controller/bootloader when it arrives before flashing.
-
-For the dongle shield, set `ZMK_SPLIT=y`, `ZMK_SPLIT_ROLE_CENTRAL=y`, and `ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS=2`. If retaining five host Bluetooth profiles, set both `BT_MAX_CONN` and `BT_MAX_PAIRED` to **7** (two peripherals plus five profiles), as prescribed by the integration guide. Check these defaults against v0.3 before implementation.
+The GitHub Actions build produces separate UF2 files for `totem_left`, `totem_right`, `totem_dongle`, and `settings_reset`, all for the XIAO nRF52840. Use the matching file for each device; the same settings-reset image applies to all three XIAO controllers.
 
 ## Migration and rollback
 

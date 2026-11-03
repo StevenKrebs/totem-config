@@ -2,6 +2,10 @@
 
 38-key ZMK firmware for the [Ergomech Totem Executive Edition](https://ergomech.store/shop/totem-executive-edition-522), based on [Ergomech’s ZMK-TOTEM firmware](https://github.com/ergomechstore/ZMK-TOTEMIST).
 
+## Central dongle firmware
+
+On `central-dongle`, both halves connect to the KeebSupply XIAO nRF52840 dongle. Plug the dongle into the host for USB output and Studio access. The halves cannot connect directly to the host with this firmware. See [flashing and rollback instructions](docs/central-dongle.md).
+
 <details>
 <summary>Keymap</summary>
 

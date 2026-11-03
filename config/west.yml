@@ -9,7 +9,7 @@ manifest:
     import: app/west.yml
   - name: zmk-keyboards-totem
     url: https://github.com/victorlucachi/zmk-keyboards-totem
-    revision: main
+    revision: 6b76bfbc5356cb5d93fc2d64acf44608bfc50187
     path: modules/zmk-keyboards-totem
   self:
     path: config
