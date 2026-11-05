@@ -6,3 +6,9 @@ if(CONFIG_BT_MAX_PAIRED)
     ${CMAKE_CURRENT_LIST_DIR}/boards/shields/totem/behaviors/smart_shift.c
   )
 endif()
+
+if(CONFIG_ZMK_SPLIT AND CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+  target_sources(app PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/boards/shields/totem/behaviors/layer_indicator.c
+  )
+endif()
