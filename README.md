@@ -33,3 +33,13 @@ Hold Space + Enter to toggle Navigation, or Tab + Enter to toggle System from Ba
 - **Smart Shift** toggles automatic sentence capitalization. **Caps Logic** toggles Caps Word on tap and sends Caps Lock on hold.
 - **Meta** and **Hyper** are multi-modifier shortcuts. Their macOS and Windows modifier combinations are shown below the keymap.
 - **Output toggle** switches between USB and Bluetooth. Bluetooth controls select profiles 0–4 or clear their pairings.
+
+## macOS layer indicator
+
+Install [Hammerspoon](https://www.hammerspoon.org/) and grant it Accessibility access. Copy [totem-layer.lua](tools/totem-layer.lua) to `~/.hammerspoon/totem-layer.lua` and add this line to `~/.hammerspoon/init.lua`:
+
+```lua
+totemLayerIndicator = require("totem-layer")
+```
+
+Reload Hammerspoon and change layers once to populate the menu bar label. The central sends F13–F19 over the selected keyboard connection. The script reserves those keys across all keyboards while it runs. macOS Secure Input can temporarily block updates.
