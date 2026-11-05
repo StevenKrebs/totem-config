@@ -19,15 +19,15 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_right
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_dongle
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: seeeduino_xiao_ble
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_HID_LAYER_STATE_REPORT=y
+  - board: xiao_ble//zmk
     shield: settings_reset

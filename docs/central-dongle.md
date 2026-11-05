@@ -24,7 +24,7 @@ https://zmk.dev/docs/hardware-integration/dongle
 - `config/west.yml` pins the existing Totem module to `6b76bfbc5356cb5d93fc2d64acf44608bfc50187`, which already supplies the matching dongle shield and physical layout. No copied shield is needed.
 - `config/totem.conf` keeps radio power and battery reporting on both halves.
 - `config/totem_dongle.conf` configures two peripheral connections and seven connection/bond slots, preserving five host Bluetooth profiles. It keeps the USB-powered dongle awake and enables split battery fetching/proxy reporting.
-- ZMK remains on v0.3 with `seeeduino_xiao_ble` board naming. The newer vendor example uses `xiao_ble//zmk`; those names are not mixed here.
+- The build uses the pinned `pfilipp/zmk` fork and the `xiao_ble//zmk` board target. Only the dongle reports the active layer to [ZMK Layer Monitor](https://github.com/pfilipp/zmk-layer).
 - The existing Gaming keymap, Executive Edition geometry, OS mode, and smart behaviors are retained. Processing and saved central settings now live on the dongle.
 
 ## Firmware outputs
