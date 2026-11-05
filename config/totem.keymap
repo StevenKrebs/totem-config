@@ -161,10 +161,10 @@
         BASE {
             label = "BASE";
             bindings = <
-                &kp Q  &kp W               &kp E                  &kp R                  &kp T                 &kp Y      &kp U                    &kp I                    &kp O                &kp P
-                &kp A  &thrm_left LCTRL S  &thrm_left LEFT_ALT D  &thrm_left LEFT_GUI F  &thrm_left GLOBE G    &kp H      &thrm_right RIGHT_GUI J  &thrm_right RIGHT_ALT K  &thrm_right RCTRL L  &kp APOSTROPHE
-&kp LEFT_SHIFT  &kp Z  &kp X               &kp C                  &kp V                  &kp B                 &kp N      &kp M                    &kp COMMA                &kp DOT              &kp FSLH        &kp RSHIFT
-                                           &meta_mt 0 ESC         &lt 3 SPACE            &lt 4 TAB             &lt 2 ENTER  &lt 1 BACKSPACE         &hyper_mt 0 DELETE
+                &kp Q  &kp W               &kp E                  &kp R                  &kp T                 &kp Y        &kp U                    &kp I                    &kp O                &kp P
+                &kp A  &thrm_left LCTRL S  &thrm_left LEFT_ALT D  &thrm_left LEFT_GUI F  &thrm_left GLOBE G    &kp H        &thrm_right RIGHT_GUI J  &thrm_right RIGHT_ALT K  &thrm_right RCTRL L  &kp APOSTROPHE
+&kp LEFT_SHIFT  &kp Z  &kp X               &kp C                  &kp V                  &kp B                 &kp N        &kp M                    &kp COMMA                &kp DOT              &kp FSLH        &kp RSHIFT
+                                           &meta_mt 0 ESC         &lt 3 SPACE            &lt 4 TAB             &lt 2 ENTER  &lt 1 BACKSPACE          &hyper_mt 0 DELETE
             >;
         };
 
@@ -191,10 +191,10 @@
         NAVIGATION {
             label = "NAVIGATION";
             bindings = <
-        &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &none         &key_repeat   &none            &none     &none       &kp INS             &none      &none
-        &none              &kp LCTRL          &kp LEFT_ALT  &kp LEFT_GUI  &kp GLOBE        &kp LEFT  &kp DOWN    &kp UP_ARROW        &kp RIGHT  &none
-&trans  &kp LG(Z)          &kp LG(X)          &kp LG(C)     &kp LG(V)     &kp LS(LG(Z))    &kp HOME  &kp PG_DN   &kp PG_UP           &kp END    &none  &trans
-                                              &to 0         &none         &none             &kp RETURN  &kp BACKSPACE  &hyper_mt 0 DELETE
+        &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &none         &key_repeat   &none            &none       &none          &kp INS             &none      &none
+        &none              &kp LCTRL          &kp LEFT_ALT  &kp LEFT_GUI  &kp GLOBE        &kp LEFT    &kp DOWN       &kp UP_ARROW        &kp RIGHT  &none
+&trans  &kp LG(Z)          &kp LG(X)          &kp LG(C)     &kp LG(V)     &kp LS(LG(Z))    &kp HOME    &kp PG_DN      &kp PG_UP           &kp END    &none  &trans
+                                              &to 0         &none         &none            &kp RETURN  &kp BACKSPACE  &hyper_mt 0 DELETE
             >;
         };
 
@@ -211,10 +211,10 @@
         GAMING {
             label = "GAME";
             bindings = <
-        &kp ESC       &kp Q  &kp W  &kp E  &kp R    &none  &none  &none  &none  &none
-        &kp LSHFT     &kp A  &kp S  &kp D  &kp G    &none  &none  &none  &none  &none
-&trans  &kp LEFT_GUI  &kp X  &kp C  &kp V  &kp B    &none  &none  &none  &none  &none  &trans
-                             &kp LEFT_ALT  &kp SPACE  &kp TAB    &kp ENTER  &kp BACKSPACE  &none
+        &kp Q  &kp W  &kp E             &kp R      &kp T               &kp Y      &kp U          &kp I      &kp O    &kp P
+        &kp A  &kp S  &kp D             &kp F      &kp G               &kp H      &kp J          &kp K      &kp L    &kp APOS
+&trans  &kp Z  &kp X  &kp C             &kp V      &kp B               &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &trans
+                      &mt LEFT_GUI ESC  &kp SPACE  &mt LEFT_ALT TAB    &kp ENTER  &kp BACKSPACE  &kp LCTRL
             >;
         };
 
