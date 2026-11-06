@@ -32,10 +32,19 @@ Hold Space + Enter to toggle Navigation, or Tab + Enter to toggle System from Ba
 
 ## macOS layer indicator
 
-Install [Hammerspoon](https://www.hammerspoon.org/) and grant it Accessibility access. Copy [totem-layer.lua](tools/totem-layer.lua) to `~/.hammerspoon/totem-layer.lua` and add this line to `~/.hammerspoon/init.lua`:
+The central publishes the active layer over a vendor-defined USB HID interface and a Bluetooth characteristic. Install [Hammerspoon](https://www.hammerspoon.org/) and build the companion reader on the Mac:
+
+```sh
+sh tools/build-totem-layer-app.sh "$HOME/Applications/Totem Layer Reader.app"
+open "$HOME/Applications/Totem Layer Reader.app"
+```
+
+Grant Bluetooth access if prompted. Connect the Totem to macOS by USB or pair it in Bluetooth settings. The reader prefers USB when both links are available. To launch the reader at login, add it to Login Items.
+
+Copy [totem-layer.lua](tools/totem-layer.lua) to `~/.hammerspoon/totem-layer.lua` and add this line to `~/.hammerspoon/init.lua`:
 
 ```lua
 totemLayerIndicator = require("totem-layer")
 ```
 
-Reload Hammerspoon and change layers once to populate the menu bar label. The central sends F13–F19 over the selected keyboard connection. The script reserves those keys across all keyboards while it runs. macOS Secure Input can temporarily block updates.
+Reload Hammerspoon. The menu shows the current layer after the reader connects. If macOS has cached the older Bluetooth services and the layer stays blank, forget and pair the Totem again.
