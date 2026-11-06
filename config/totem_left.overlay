@@ -1,3 +1,5 @@
-&kscan0 {
-    wakeup-source;
+/ {
+    kscan_0 {
+        wakeup-source;
+    };
 };
