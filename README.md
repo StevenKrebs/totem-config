@@ -39,6 +39,7 @@ Hold Space + Enter to toggle Navigation, or Tab + Enter to toggle System from Ba
 The central publishes the active layer over a vendor-defined USB HID interface and a Bluetooth characteristic. Install [Hammerspoon](https://www.hammerspoon.org/) and build the companion reader on the Mac:
 
 ```sh
+pkill -x totem-layer || true
 sh tools/build-totem-layer-app.sh "$HOME/Applications/Totem Layer Reader.app"
 open "$HOME/Applications/Totem Layer Reader.app"
 ```
@@ -51,4 +52,9 @@ Copy [totem-layer.lua](tools/totem-layer.lua) to `~/.hammerspoon/totem-layer.lua
 totemLayerIndicator = require("totem-layer")
 ```
 
-Reload Hammerspoon. The menu shows the current layer after the reader connects. If macOS has cached the older Bluetooth services and the layer stays blank, forget and pair the Totem again.
+Reload Hammerspoon. If your existing Hammerspoon module also displays battery levels and already listens for `com.totem.layer.changed`, keep that module when upgrading the reader.
+
+For a dongle setup, plug the central dongle into the Mac over USB. The menu shows the current layer after the reader connects and refreshes within about two seconds if a USB update is missed. If macOS has cached the older Bluetooth services and the layer stays blank, forget and pair the Totem again.
+
+
+With battery-report firmware on the central dongle, the macOS battery reader can read both halves over USB. Press a key on each half after the dongle starts so it can identify left and right independently of pairing order. The battery fields show the last reading received since the dongle started. A dash means no reading is available yet.

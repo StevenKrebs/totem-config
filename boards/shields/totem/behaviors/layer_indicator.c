@@ -27,9 +27,47 @@ BT_GATT_SERVICE_DEFINE(
 #if IS_ENABLED(CONFIG_ZMK_USB)
 #include <zephyr/device.h>
 #include <zephyr/init.h>
+#include <zephyr/usb/usb_ch9.h>
 #include <zephyr/usb/class/usb_hid.h>
 #include <zmk/usb.h>
 #include <zmk/events/usb_conn_state_changed.h>
+
+#if IS_ENABLED(CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING) && \
+    CONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS == 2
+#include <zephyr/sys/atomic.h>
+#include <zmk/events/battery_state_changed.h>
+#include <zmk/events/position_state_changed.h>
+
+#define TOTEM_USB_BATTERY 1
+#define BATTERY_UNKNOWN 0xFF
+
+// Store source and charge plus one, so zero represents an unread value.
+static atomic_t battery_sources[2];
+static atomic_t battery_levels[2];
+static uint8_t usb_read_battery[2];
+
+static int battery_report_listener(const zmk_event_t *event) {
+    const struct zmk_peripheral_battery_state_changed *battery =
+        as_zmk_peripheral_battery_state_changed(event);
+    if (battery && battery->source < ARRAY_SIZE(battery_levels) && battery->state_of_charge <= 100) {
+        atomic_set(&battery_levels[battery->source], battery->state_of_charge + 1);
+    }
+
+    const struct zmk_position_state_changed *key = as_zmk_position_state_changed(event);
+    if (key && key->state && key->source < ARRAY_SIZE(battery_sources) && key->position < 38) {
+        // Match the physical right half in the Totem's 38-key layout.
+        bool right = (key->position >= 5 && key->position <= 9) ||
+                     (key->position >= 15 && key->position <= 19) ||
+                     (key->position >= 26 && key->position <= 31) || key->position >= 35;
+        atomic_set(&battery_sources[right], key->source + 1);
+    }
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(battery_report, battery_report_listener);
+ZMK_SUBSCRIPTION(battery_report, zmk_peripheral_battery_state_changed);
+ZMK_SUBSCRIPTION(battery_report, zmk_position_state_changed);
+#endif
 
 static const struct device *layer_hid;
 static uint8_t usb_read_layer;
@@ -43,11 +81,30 @@ static const uint8_t layer_descriptor[] = {
     0x15, 0x00, 0x25, 0x06,
     0x75, 0x08, 0x95, 0x01,
     0x81, 0x02,       // One byte of input data
+#if defined(TOTEM_USB_BATTERY)
+    0x09, 0x03,       // Left half
+    0x09, 0x04,       // Right half
+    0x26, 0xFF, 0x00, // 0–100 percent or 0xFF for unknown
+    0x95, 0x02,
+    0xB1, 0x02,       // Two-byte feature report, separate from layer input
+#endif
     0xC0,
 };
 
-static int usb_get_layer(const struct device *dev, struct usb_setup_packet *setup, int32_t *len,
+static int usb_get_report(const struct device *dev, struct usb_setup_packet *setup, int32_t *len,
                          uint8_t **data) {
+#if defined(TOTEM_USB_BATTERY)
+    if (setup->wValue == 0x0300) {
+        for (size_t side = 0; side < ARRAY_SIZE(usb_read_battery); side++) {
+            atomic_val_t source = atomic_get(&battery_sources[side]);
+            atomic_val_t charge = source ? atomic_get(&battery_levels[source - 1]) : 0;
+            usb_read_battery[side] = charge ? charge - 1 : BATTERY_UNKNOWN;
+        }
+        *len = sizeof(usb_read_battery);
+        *data = usb_read_battery;
+        return 0;
+    }
+#endif
     if (setup->wValue != 0x0100) {
         return -ENOTSUP;
     }
@@ -60,7 +117,7 @@ static int usb_get_layer(const struct device *dev, struct usb_setup_packet *setu
 static void usb_layer_ready(const struct device *dev) { k_sem_give(&usb_idle); }
 
 static const struct hid_ops layer_ops = {
-    .get_report = usb_get_layer,
+    .get_report = usb_get_report,
     .int_in_ready = usb_layer_ready,
 };
 

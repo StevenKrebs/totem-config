@@ -49,6 +49,7 @@ final class LayerReader: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
         bluetooth = CBCentralManager(delegate: self, queue: nil,
                                      options: [CBCentralManagerOptionShowPowerAlertKey: false])
         Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] _ in
+            self?.refreshUSBLayer()
             self?.findBluetooth()
         }
     }
@@ -56,6 +57,12 @@ final class LayerReader: NSObject, CBCentralManagerDelegate, CBPeripheralDelegat
     private func attachUSB(_ device: IOHIDDevice) {
         guard usbDevice == nil else { return }
         usbDevice = device
+        refreshUSBLayer()
+    }
+
+    private func refreshUSBLayer() {
+        // Recover the current layer if an interrupt report was missed.
+        guard let device = usbDevice else { return }
         var value: UInt8 = 0
         var size = 1
         if IOHIDDeviceGetReport(device, kIOHIDReportTypeInput, 0, &value, &size) == kIOReturnSuccess,
